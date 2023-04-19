@@ -26,7 +26,7 @@ class MouseTracer extends Thread implements ActionListener
         stop=new JButton("Stop the tracing");
         stop.setVerticalAlignment(SwingConstants.BOTTOM);
         stop.setIconTextGap(80);
-
+//@author AVISHEIKH
 
         int minimum = 0;
         int maximum = 100;

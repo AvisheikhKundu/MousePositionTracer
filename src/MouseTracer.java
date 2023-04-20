@@ -66,7 +66,8 @@ class MouseTracer extends Thread implements ActionListener
         p1.setLayout(new GridLayout(3,1,2,2));
         frm.getContentPane().add(p1);
 
-        //frm.setSize(600,270);
+        frm.setSize(600,270);
+        frm.setLocationRelativeTo(null);
         frm.pack();
         frm.setVisible(true);
         store=new Vector(10,5);

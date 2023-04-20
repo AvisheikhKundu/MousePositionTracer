@@ -198,3 +198,27 @@ class Ristriction extends Thread
     {
         while(true)
         {
+            try{
+                int x1=frm.getLocation().x;
+                int y1=frm.getLocation().y;
+                int x2=frm.getWidth();
+                int y2=frm.getHeight();
+                int x=(int)MouseInfo.getPointerInfo().getLocation().getX();
+                int y=(int)MouseInfo.getPointerInfo().getLocation().getY();
+
+
+                if(x>=x1 && x<=(x1+x2) && y>=y1 && y<=(y1+y2))
+                {	x3=x;
+                    y3=y;
+                }//	System.out.println("IN");
+                else
+                {
+                    Robot r=new Robot();
+                    r.mouseMove(x3-5,y3-5);
+                }
+
+                Thread.sleep(2);
+            }catch(Exception tt){}
+        }
+    }
+}

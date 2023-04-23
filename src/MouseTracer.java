@@ -7,7 +7,7 @@ class MouseTracer extends Thread implements ActionListener
 {
 
     JFrame frm;
-    Ristriction ris;
+    Restriction ris;
     JButton start,stop,show;
     Vector store;
     JSlider jsb;
@@ -26,7 +26,7 @@ class MouseTracer extends Thread implements ActionListener
         stop=new JButton("Stop the tracing");
         stop.setVerticalAlignment(SwingConstants.BOTTOM);
         stop.setIconTextGap(80);
-//@author AVISHEIKH
+        //@author AVISHEIKH
 
         int minimum = 0;
         int maximum = 100;
@@ -43,7 +43,7 @@ class MouseTracer extends Thread implements ActionListener
         lab.setTransferHandler(new TransferHandler("text"));
 
 
-        tog=new JToggleButton("Ristrict the Mouse");
+        tog=new JToggleButton("Restrict the Mouse");
         frm.setLayout(new FlowLayout());
         frm.setAlwaysOnTop(true);
         stop.setEnabled(false);
@@ -51,7 +51,7 @@ class MouseTracer extends Thread implements ActionListener
         jsb.setEnabled(false);
         lab.setEnabled(false);
         tog.setForeground(new Color(0,150,0));
-        ris=new Ristriction(frm);
+        ris=new Restriction(frm);
         ris.start();
         ris.suspend();
         p1=new Panel();
@@ -187,11 +187,11 @@ class ShowMouseMove extends Thread
     }
 }
 
-class Ristriction extends Thread
+class Restriction extends Thread
 {
     JFrame frm;
     int x3,y3;
-    public Ristriction(JFrame frm)
+    public Restriction(JFrame frm)
     {
         this.frm=frm;
     }

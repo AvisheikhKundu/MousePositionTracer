@@ -200,6 +200,7 @@ class Restriction extends Thread
         while(true)
         {
             try{
+            
                 int x1=frm.getLocation().x;
                 int y1=frm.getLocation().y;
                 int x2=frm.getWidth();
